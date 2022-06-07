@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+}
+
+.feedback-button {
+    background-color: rgb(220, 208, 255);
+    border-radius: 12px;
+    color: #121212;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-weight: 600;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    padding: .5rem .7rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+}
