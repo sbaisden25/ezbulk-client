@@ -6,24 +6,25 @@
   
   .tags {
     box-sizing: border-box;
-    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
-    border: 1px solid rgba(18, 18, 18, .1);
-    padding: 1rem;
-    margin: 1.2rem;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 20px;
+    border: 1px solid rgba(18, 18, 18, .2);
+    padding: .8rem;
+    margin: .6rem;
     border-radius: .5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     float: left;
   }
   
   .sort {
-      padding: 2rem;
-      margin: 1.2rem;
+      padding: .5rem;
+      margin: .7rem;
       border-radius: .5rem;
       justify-content: center;
       
       float: right;
-      padding-left: 31%;
+      padding-left: 28%;
+      
     
   }
   
@@ -34,8 +35,8 @@
     box-sizing: border-box;
     box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
     border: 1px solid rgba(18, 18, 18, .2);
-    padding: 1rem;
-    margin: 1.2rem;
+    padding: .4rem;
+    margin: .6rem;
   }
   
   
@@ -51,12 +52,12 @@
     display: inline-flex;
     flex: 1 1 auto;
     font-family: Inter,sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     justify-content: center;
     line-height: 1;
     outline: none;
-    padding: .5rem 1rem;
+    padding: .4rem;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s,-webkit-box-shadow .2s;
@@ -80,7 +81,7 @@
       align-items: center;
       background-color: #fff;
       border-radius: 12px;
-      box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+      box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 20px;
       box-sizing: border-box;
       color: #121212;
       cursor: pointer;
@@ -101,8 +102,9 @@
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
-      margin: 0.5rem;
+      margin-top: 1.5rem;
       max-width: 300px;
+      border: 1px solid rgba(18, 18, 18, .4);
     }
   
   
@@ -131,4 +133,23 @@
       padding: 1rem;
       margin: 1.2rem;
       border-radius: .5rem;
+    }
+
+
+    .sortbuttitem {
+      align-items: center;
+      background-color: #fff;
+      color: #121212;
+      cursor: pointer;
+      font-family: Inter,sans-serif;
+      font-weight: 600;
+      justify-content: center;
+      padding: .5rem;
+      text-align: center;
+      text-decoration: none;
+      transition: box-shadow .2s,-webkit-box-shadow .2s;
+      touch-action: manipulation;
+      box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 20px;
+      box-sizing: border-box;
+      border: 1px solid rgba(18, 18, 18, .2);
     }

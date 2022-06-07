@@ -88,7 +88,7 @@ function ProductList() {
         
     <div class="header">
 
-    <h1>💪 <strong>Gains per dollar spent</strong> 💵</h1>
+    <h4>💪 <strong>Gains per dollar spent</strong> 💵</h4>
 
     </div>
 
@@ -109,11 +109,16 @@ function ProductList() {
 
         <button class="button-35 tagbutt" role="button" onClick={() => { setTag("bread") }}>Bread</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("breakfast") }}>Breakfast</button>
+        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("breakfast") }}>Breakfast</button> 
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("potatoes") }}>Potatoes</button>
+        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("potatoes") }}>Potatoes</button> 
+
 
         <button class="button-35 tagbutt" role="button" onClick={() => { setTag("pasta") }}>Pasta</button>
+
+       {/*  <button class="button-35 tagbutt" role="button" onClick={() => { setTag("creatine") }}>Creatine</button>
+
+        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("whey") }}>Whey</button> */}
 
         <button class="button-35 tagbutt gains" role="button" onClick={() => { setTag("gains") }}>Gains</button>
 
@@ -123,20 +128,23 @@ function ProductList() {
 
     <div class="sort">
 
+    <a class="feedback-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf6hY-gmnjw29oxaBhc5S19n6j8AYUWo1AAIop0U_RNcaNfSw/viewform?usp=sf_link">Give Feedback 💜</a>
+
   <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Sort By
   </button>
 
     <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
 
-        <button class="sortbutt dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>None</button>
-        <button class="sortbutt dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
-        <button class="sortbutt dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
-        <button class="sortbutt dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
-        <button class="sortbutt dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>None</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
     </div>
 
 
+    
 
     </div>
 
