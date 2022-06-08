@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 import './productlist.css';
 import Product from '../product/Product';
+import Post from '../post/Post';
 import Footer from "../footer/Footer";
 
 function ProductList() {
 
   const [products, setProducts] = useState([]);
+  const [posts, setPosts] = useState([]);
+
   const [tag, setTag] = useState('');
   const [sortBy, setSortBy] = useState('');
 
@@ -14,6 +17,17 @@ function ProductList() {
 // get products by tag and sortBy
 
     useEffect(() => {
+
+    if (tag == 'posts') {
+        axios.get(`https://ezbulk-backend.herokuapp.com/posts/all`,
+        Headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'})
+        .then(res => {
+            setPosts(res.data)
+        })
+    }
+
 
     if (tag !== "" && sortBy === "") {
         axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag,
@@ -89,7 +103,7 @@ function ProductList() {
         
     <div class="header">
 
-    <h4>💪 <strong>Gains per dollar spent</strong> 💵</h4>
+    <h4><strong>Stats <u>per dollar spent</u></strong> 💵</h4>
 
     </div>
 
@@ -114,12 +128,13 @@ function ProductList() {
 
         <button class="button-35 tagbutt" role="button" onClick={() => { setTag("potatoes") }}>Potatoes</button> 
 
-
         <button class="button-35 tagbutt" role="button" onClick={() => { setTag("pasta") }}>Pasta</button>
 
        {/*  <button class="button-35 tagbutt" role="button" onClick={() => { setTag("creatine") }}>Creatine</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("whey") }}>Whey</button> */}
+        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("whey") }}>Whey</button> 
+
+        <button class="button-35 tagbutt research" role="button" onClick={() => { setTag("posts") }}>Research</button> */}
 
         <button class="button-35 tagbutt gains" role="button" onClick={() => { setTag("gains") }}>Gains</button>
 
@@ -177,6 +192,10 @@ function ProductList() {
                  />
 
             ))}
+            
+            
+
+
 
 
 

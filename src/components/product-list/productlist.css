@@ -7,12 +7,12 @@
   .tags {
     box-sizing: border-box;
     box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 20px;
-    border: 1px solid rgba(18, 18, 18, .2);
+    border: 1px solid rgba(18, 18, 18, .1);
     padding: .8rem;
     margin: .6rem;
     margin-left: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     float: left;
   }
   
@@ -20,7 +20,7 @@
     box-sizing: border-box;
       margin: .6rem;
       
-      padding-left: 33%;
+      padding-left: 30%;
       
     
   }
