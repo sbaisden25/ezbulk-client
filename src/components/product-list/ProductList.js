@@ -35,7 +35,6 @@ function ProductList() {
         })
     }
 
-    // if no tag and no sortBy, return all products
     if (tag !== '' && sortBy !== '') {
         axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy + '/tags/' + tag,
         Headers = {
@@ -46,6 +45,8 @@ function ProductList() {
         })
     }
 
+    
+    // if no tag and no sortBy, return all products
     if (tag === "" && sortBy === "") {
         axios.get('https://ezbulk-backend.herokuapp.com/products',
         Headers = {
