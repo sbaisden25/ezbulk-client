@@ -1,33 +1,48 @@
-import { useState, useEffect } from "react";
+import { setTimeout, useState, useEffect } from "react";
 import axios from "axios"
 import './productlist.css';
 import Product from '../product/Product';
-import Post from '../post/Post';
 import Footer from "../footer/Footer";
+
+import Lottie from "react-lottie";
+
+import * as preloader from "./preloader.json";
 
 function ProductList() {
 
   const [products, setProducts] = useState([]);
-  const [posts, setPosts] = useState([]);
-
   const [tag, setTag] = useState('');
   const [sortBy, setSortBy] = useState('');
+
+  // Loading Animation
+  const [done, setDone] = useState(undefined);
+
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: preloader.default,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
 
 // get products by tag and sortBy
 
     useEffect(() => {
 
-    if (tag == 'posts') {
-        axios.get(`https://ezbulk-backend.herokuapp.com/posts/all`,
+    // if no tag and no sortBy, return all products
+    if (tag === "" && sortBy === "") {
+        axios.get('https://ezbulk-backend.herokuapp.com/products',
         Headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
         .then(res => {
-            setPosts(res.data)
+            setDone(true)
+            setProducts(res.data);
         })
-    }
-
+    } 
 
     if (tag !== "" && sortBy === "") {
         axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag,
@@ -35,6 +50,7 @@ function ProductList() {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
         .then(res => {
+            setDone(true)
             setProducts(res.data);
         })
     }
@@ -45,6 +61,7 @@ function ProductList() {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
         .then(res => {
+            setDone(true)
             setProducts(res.data);
         })
     }
@@ -55,26 +72,13 @@ function ProductList() {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
         .then(res => {
+            setDone(true)
             setProducts(res.data)
         })
     }
 
-    
-    // if no tag and no sortBy, return all products
-    if (tag === "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products',
-        Headers = {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'})
-        .then(res => {
-            setProducts(res.data);
-        })
-    } 
 
     }, [tag, sortBy])
-
-
-    console.log(products)
 
 
     var div = document.getElementsByClassName('dropdown-content');
@@ -97,7 +101,7 @@ function ProductList() {
 
 
   return (
-    
+
     <div>
 
         
@@ -160,17 +164,20 @@ function ProductList() {
     </div>
 
 
-    
+    </div>
 
     </div>
 
+    {!done ? (
+        <Lottie 
+	    options={defaultOptions}
+        height={400}
+        width={400}
+        speed={2.2}
+      /> ) : (
 
-    </div>
-    
 
-
-    <div className="list">
-
+        <div className="list">
             
             {products.map(product => (
 
@@ -192,23 +199,18 @@ function ProductList() {
                  />
 
             ))}
-            
-            
 
 
 
+     </div>
 
-
-    </div>
+    )}
 
 
     <Footer />
 
-    
     </div>
-
     
-
 );
 }
 
