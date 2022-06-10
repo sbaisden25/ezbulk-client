@@ -1,4 +1,4 @@
-import { setTimeout, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios"
 import './productlist.css';
 import Product from '../product/Product';
@@ -34,10 +34,7 @@ function ProductList() {
 
     // if no tag and no sortBy, return all products
     if (tag === "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products',
-        Headers = {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'})
+        axios.get('https://ezbulk-backend.herokuapp.com/products')
         .then(res => {
             setDone(true)
             setProducts(res.data);
@@ -45,10 +42,7 @@ function ProductList() {
     } 
 
     if (tag !== "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag,
-        Headers = {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'})
+        axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag)
         .then(res => {
             setDone(true)
             setProducts(res.data);
@@ -56,10 +50,7 @@ function ProductList() {
     }
 
     if (tag === "" && sortBy !== "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy,
-        Headers = {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'})
+        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy)
         .then(res => {
             setDone(true)
             setProducts(res.data);
@@ -67,10 +58,7 @@ function ProductList() {
     }
 
     if (tag !== '' && sortBy !== '') {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy + '/tags/' + tag,
-        Headers = {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'})
+        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy + '/tags/' + tag)
         .then(res => {
             setDone(true)
             setProducts(res.data)
@@ -80,18 +68,15 @@ function ProductList() {
 
     }, [tag, sortBy])
 
-
     var div = document.getElementsByClassName('dropdown-content');
 
     for(var  i =0;i<div.length;i++){
-
     for(var  j =0;j<div[i].children.length;j++){
 
     div[i].children[j].addEventListener('click',function(){
-
         this.parentNode.previousElementSibling.innerHTML = this.innerHTML;
-    })
-    }
+            })
+        }
     }
 
     window.onload = function() {
@@ -99,40 +84,47 @@ function ProductList() {
       };
 
 
-
   return (
 
     <div>
 
         
-    <div class="header">
+    <div className="header">
 
     <h4><strong>Stats <u>per dollar spent</u></strong> 💵</h4>
 
     </div>
 
 
-    <div class="row">
+    <div className="row">
 
     
-    <div class="tags">
+    <div className="tags">
 
 
-        <button class="button-35 tagbutt" id="default-tag" role="button" onClick={() => { setTag("") }}>All</button>
+        <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("nuts") }}>Nuts</button>
+        <button class="button-35 tagbutt" onClick={() => { setTag("carbs"); setSortBy("carbPerDol") }}>Carbs</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("meat") }}>Meat</button>
+        <button class="button-35 tagbutt" onClick={() => { setTag("protein") }}>Protein</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("dairy") }}>Dairy</button>
+        <button class="button-35 tagbutt" onClick={() => { setTag("nuts") }}>Nuts</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("bread") }}>Bread</button>
+        <button class="button-35 tagbutt" onClick={() => { setTag("meat") }}>Meat</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("breakfast") }}>Breakfast</button> 
+        <button class="button-35 tagbutt" onClick={() => { setTag("dairy") }}>Dairy</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("potatoes") }}>Potatoes</button> 
+        <button class="button-35 tagbutt" onClick={() => { setTag("bread") }}>Bread</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("pasta") }}>Pasta</button>
+        <button class="button-35 tagbutt" onClick={() => { setTag("breakfast") }}>Breakfast</button>
+
+        <button class="button-35 tagbutt" onClick={() => { setTag("whey") }}>Whey</button>
+
+        <button class="button-35 tagbutt" onClick={() => { setTag("pasta") }}>Pasta</button>
+
+        <button class="button-35 tagbutt" onClick={() => { setTag("amazon") }}>Amazon</button>
+
+        <button class="button-35 tagbutt" onClick={() => { setTag("walmart") }}>Walmart</button>
 
        {/*  <button class="button-35 tagbutt" role="button" onClick={() => { setTag("creatine") }}>Creatine</button>
 
@@ -140,7 +132,7 @@ function ProductList() {
 
         <button class="button-35 tagbutt research" role="button" onClick={() => { setTag("posts") }}>Research</button> */}
 
-        <button class="button-35 tagbutt gains" role="button" onClick={() => { setTag("gains") }}>Gains</button>
+        <button class="button-35 tagbutt gains" onClick={() => { setTag("gains") }}>Gains</button>
 
     </div>
 
@@ -148,7 +140,7 @@ function ProductList() {
 
     <div class="sort">
 
-    <a class="feedback-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf6hY-gmnjw29oxaBhc5S19n6j8AYUWo1AAIop0U_RNcaNfSw/viewform?usp=sf_link">Give Feedback 💜</a>
+    <a class="feedback-button" target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf6hY-gmnjw29oxaBhc5S19n6j8AYUWo1AAIop0U_RNcaNfSw/viewform?usp=sf_link">Give Feedback 💜</a>
 
   <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Protein Per $

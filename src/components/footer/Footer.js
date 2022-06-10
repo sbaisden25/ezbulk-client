@@ -17,7 +17,7 @@ export default class Footer extends Component {
               subtitle=""
             />
 
-            <a class="feedback-button" target="_blank" href="https://www.buymeacoffee.com/ezbulkorg">Buy me a coffee ☕</a>
+            <a class="feedback-button" target="_blank" rel="noreferrer" href="https://www.buymeacoffee.com/ezbulkorg">Buy me a coffee ☕</a>
 
 
 
