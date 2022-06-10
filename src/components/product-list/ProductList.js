@@ -12,7 +12,7 @@ function ProductList() {
 
   const [products, setProducts] = useState([]);
   const [tag, setTag] = useState('');
-  const [sortBy, setSortBy] = useState('');
+  const [sortBy, setSortBy] = useState('protPerDol');
 
   // Loading Animation
   const [done, setDone] = useState(undefined);
@@ -151,16 +151,16 @@ function ProductList() {
     <a class="feedback-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf6hY-gmnjw29oxaBhc5S19n6j8AYUWo1AAIop0U_RNcaNfSw/viewform?usp=sf_link">Give Feedback 💜</a>
 
   <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Sort By
+    Protein Per $
   </button>
 
     <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
 
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>None</button>
         <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
         <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
         <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
+        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("") }}>None</button>
     </div>
 
 
