@@ -91,7 +91,7 @@ function ProductList() {
         
     <div className="header">
 
-    <h4><strong>Stats <u>per dollar spent</u></strong> 💵</h4>
+    <h3><strong>Stats <u>per dollar spent</u></strong> 💵</h3>
 
     </div>
 
@@ -128,11 +128,10 @@ function ProductList() {
 
        {/*  <button class="button-35 tagbutt" role="button" onClick={() => { setTag("creatine") }}>Creatine</button>
 
-        <button class="button-35 tagbutt" role="button" onClick={() => { setTag("whey") }}>Whey</button> 
-
         <button class="button-35 tagbutt research" role="button" onClick={() => { setTag("posts") }}>Research</button> */}
 
         <button class="button-35 tagbutt gains" onClick={() => { setTag("gains") }}>Gains</button>
+
 
     </div>
 
@@ -154,6 +153,13 @@ function ProductList() {
         <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
         <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("") }}>None</button>
     </div>
+
+
+    {/* <div className="results">
+
+    {products.length} results
+
+    </div> */}
 
 
     </div>
