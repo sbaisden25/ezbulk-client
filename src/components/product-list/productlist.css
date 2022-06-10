@@ -18,9 +18,9 @@
   
   .sort {
     box-sizing: border-box;
-      margin: .6rem;
+    margin: .6rem;
       
-      padding-left: 23%;
+    padding-left: 28%;
     
   }
 
@@ -105,7 +105,7 @@
       margin-top: 1.6rem;
       max-width: 300px;
       border: 1px solid rgba(18, 18, 18, .4);
-      margin-left: 0px;
+      margin-left: 28px;
     }
   
   

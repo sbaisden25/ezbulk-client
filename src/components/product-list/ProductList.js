@@ -12,7 +12,7 @@ function ProductList() {
 
   const [products, setProducts] = useState([]);
   const [tag, setTag] = useState('');
-  const [sortBy, setSortBy] = useState('protPerDol');
+  const [sortBy, setSortBy] = useState('fatPerDol');
 
   // Loading Animation
   const [done, setDone] = useState(undefined);
@@ -91,7 +91,7 @@ function ProductList() {
         
     <div className="header">
 
-    <h3><strong>Stats <u>per dollar spent</u></strong> 💵</h3>
+    <h3><strong>Stats <u>per $1 spent</u></strong> 💵</h3>
 
     </div>
 
@@ -104,7 +104,7 @@ function ProductList() {
 
         <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
 
-        <button class="button-35 tagbutt" onClick={() => { setTag("carbs"); setSortBy("carbPerDol") }}>Carbs</button>
+        <button class="button-35 tagbutt" onClick={() => { setTag("carbs") }}>Carbs</button>
 
         <button class="button-35 tagbutt" onClick={() => { setTag("protein") }}>Protein</button>
 
@@ -142,7 +142,7 @@ function ProductList() {
     <a class="feedback-button" target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf6hY-gmnjw29oxaBhc5S19n6j8AYUWo1AAIop0U_RNcaNfSw/viewform?usp=sf_link">Give Feedback 💜</a>
 
   <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Protein Per $
+    Sort By
   </button>
 
     <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
