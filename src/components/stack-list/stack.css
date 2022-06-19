@@ -1,0 +1,54 @@
+
+.stackCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .15) 0 6px 20px;
+    margin: 1.2rem;
+    padding: .8rem;
+}
+
+img {
+    width: 190px;
+    height: 175px;
+    align-items: center;
+}
+
+.stats {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-gap: 1.5rem;
+    padding: .7rem;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    border: 1px solid rgba(18, 18, 18, .1);
+    margin: .4rem;
+
+
+}
+
+
+.cals {
+    width: 25%;
+    border-right: 1px solid #e2e2e2;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.prot {
+    width: 25%;
+    border-right: 1px solid #e2e2e2;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.fat {
+    width: 25%;
+    border-right: 1px solid #e2e2e2;
+    height: 100%;
+    margin: 0 auto;
+}
+.carbs {
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+}

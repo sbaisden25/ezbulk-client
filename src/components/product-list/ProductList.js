@@ -34,7 +34,10 @@ function ProductList() {
 
     // if no tag and no sortBy, return all products
     if (tag === "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products')
+        axios.get('https://ezbulk-backend.herokuapp.com/products',
+        Headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'})
         .then(res => {
             setDone(true)
             setProducts(res.data);
@@ -42,7 +45,10 @@ function ProductList() {
     } 
 
     if (tag !== "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag)
+        axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag,
+        Headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'})
         .then(res => {
             setDone(true)
             setProducts(res.data);
@@ -50,7 +56,10 @@ function ProductList() {
     }
 
     if (tag === "" && sortBy !== "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy)
+        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy,
+        Headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'})
         .then(res => {
             setDone(true)
             setProducts(res.data);
@@ -58,7 +67,10 @@ function ProductList() {
     }
 
     if (tag !== '' && sortBy !== '') {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy + '/tags/' + tag)
+        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy + '/tags/' + tag,
+        Headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'})
         .then(res => {
             setDone(true)
             setProducts(res.data)
@@ -102,7 +114,12 @@ function ProductList() {
     <div className="tags">
 
 
-        <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
+        <button class="button-35 tagbutt nav" id="default-tag" onClick={() => { setTag("") }}>All Products</button>
+
+        {/* <button class="button-35 tagbutt nav" href="/stacks">Research</button>
+
+        
+        <button class="button-35 tagbutt nav" onClick={() => { window.location.href='/stacks' }}>Stacks</button> */}
 
         <button class="button-35 tagbutt" onClick={() => { setTag("carbs") }}>Carbs</button>
 
