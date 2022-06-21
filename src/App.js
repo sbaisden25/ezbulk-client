@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import ProductList from './components/product-list/ProductList';
@@ -12,7 +13,7 @@ import ReactGA from 'react-ga';
 function App() {
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (
