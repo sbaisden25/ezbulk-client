@@ -1,4 +1,5 @@
 
+
 .list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -6,7 +7,8 @@
   
   .tags {
     box-sizing: border-box;
-    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 20px;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 2px,rgba(18, 18, 18, .1) 0 3px 10px;
     border: 1px solid rgba(18, 18, 18, .1);
     padding: .35rem;
     margin: .2rem;
@@ -30,11 +32,13 @@
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 10px;
     border: 1px solid rgba(18, 18, 18, .2);
-    padding: .4rem;
-    margin-top: .6rem;
-    margin-bottom: .6rem;
+    align-items: center;
+    padding: .8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     margin-left: 32px;
     margin-right: 20px;
   }
@@ -45,7 +49,7 @@
     align-items: center;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-shadow: transparent 0 0 0 2px,rgba(18, 18, 18, .1) 0 6px 12px;
     box-sizing: border-box;
     color: #121212;
     cursor: pointer;
@@ -66,7 +70,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin: 0.33rem;
+    margin: 0.5rem;
   }
   
   .button-35:hover {
@@ -81,7 +85,7 @@
       align-items: center;
       background-color: #fff;
       border-radius: 12px;
-      box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .2) 0 6px 20px;
+      box-shadow: transparent 0 0 0 2px,rgba(18, 18, 18, .1) 0 6px 10px;
       box-sizing: border-box;
       color: #121212;
       cursor: pointer;
@@ -102,9 +106,9 @@
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
-      margin-top: 1.6rem;
       max-width: 300px;
-      border: 1px solid rgba(18, 18, 18, .4);
+      margin-top: 33px;
+      border: 1px solid rgba(18, 18, 18, .25);
       margin-left: 28px;
     }
   
