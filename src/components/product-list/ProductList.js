@@ -114,7 +114,7 @@ function ProductList() {
     <div className="tags">
 
 
-        <button class="button-35 tagbutt nav" id="default-tag" onClick={() => { setTag("") }}>All Products</button>
+        <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
 
         {/* <button class="button-35 tagbutt nav" href="/stacks">Research</button>
 
