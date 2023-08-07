@@ -34,7 +34,7 @@ function ProductList() {
 
     // if no tag and no sortBy, return all products
     if (tag === "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products',
+        axios.get('https://shy-gray-giraffe-kit.cyclic.app/products',
         Headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
@@ -45,7 +45,7 @@ function ProductList() {
     } 
 
     if (tag !== "" && sortBy === "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/tags/' + tag,
+        axios.get('https://shy-gray-giraffe-kit.cyclic.app/products/tags/' + tag,
         Headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
@@ -56,7 +56,7 @@ function ProductList() {
     }
 
     if (tag === "" && sortBy !== "") {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy,
+        axios.get('https://shy-gray-giraffe-kit.cyclic.app/products/sort/' + sortBy,
         Headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
@@ -67,7 +67,7 @@ function ProductList() {
     }
 
     if (tag !== '' && sortBy !== '') {
-        axios.get('https://ezbulk-backend.herokuapp.com/products/sort/' + sortBy + '/tags/' + tag,
+        axios.get('https://shy-gray-giraffe-kit.cyclic.app/products/sort/' + sortBy + '/tags/' + tag,
         Headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'})
