@@ -8,7 +8,7 @@
   .tags {
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)); 
 
     box-shadow: transparent 0 0 0 2px,rgba(18, 18, 18, .2) 0 3px 8px;
     border: 1px solid rgba(18, 18, 18, .3);
