@@ -8,22 +8,25 @@
   .tags {
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr)); 
 
     box-shadow: transparent 0 0 0 2px,rgba(18, 18, 18, .2) 0 3px 8px;
     border: 1px solid rgba(18, 18, 18, .3);
     padding: .5rem;
     margin: .2rem;
+
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .tagtitle {
+    margin-left: 20%;
   }
   
   .sort {
     margin-top: 1.8rem;
     margin-left: 60%;
-    
-  }
-
-  .results {
-    
+    position: relative
   }
 
   
@@ -96,8 +99,8 @@
   
     .row {
       display: grid;
-      margin-left: 20%;
-      margin-right: 20%;
+      margin-left: 5%;
+      margin-right: 5%;
     }
   
     .gains {
