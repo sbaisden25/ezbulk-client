@@ -11,7 +11,7 @@
     padding: .1rem;
     margin: .2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 5fr)); 
     float: left;
   }
   
