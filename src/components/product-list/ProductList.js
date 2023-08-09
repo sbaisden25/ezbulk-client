@@ -108,17 +108,18 @@ function ProductList() {
 
         </div>
 
+        <div className="text-row">
+
+        <div className="tagtitle">
+
+                <h5>Tags</h5>
+        </div>
+
+        </div> 
 
         <div className="row">
 
-                <div className="tagtitle">
-                <h4> Tags </h4>
-                </div>
-        
-        
-
                 <div className="tags">
-
 
                     <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
 
@@ -151,31 +152,31 @@ function ProductList() {
 
                 </div>
 
+                
 
 
-                <div class="sort">
+        </div>
+
+        <div class="sort">
             
-                    <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort By
-                    </button>
+            <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort By
+            </button>
 
-                    <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
 
-                        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
-                        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
-                        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
-                        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
-                        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("") }}>None</button>
-                    </div>
+                <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
+                <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
+                <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
+                <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
+                <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("") }}>None</button>
+            </div>
 
-
-                </div>
-
-                <div className="results">
-
-                    {products.length} results
-
-                </div> 
+            <div className="results">
+                    
+                {products.length} results
+    
+            </div> 
 
         </div>
 
