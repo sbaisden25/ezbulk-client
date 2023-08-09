@@ -111,74 +111,71 @@ function ProductList() {
 
     <div className="row">
 
+        <div className="tagtitle">
+        <h4> Tags </h4>
+        </div>
     
-    <div className="tags">
+    
+
+            <div className="tags">
 
 
-        <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
+                <button class="button-35 tagbutt" id="default-tag" onClick={() => { setTag("") }}>All</button>
 
-        {/* <button class="button-35 tagbutt nav" href="/stacks">Research</button>
+                {/* <button class="button-35 tagbutt nav" href="/stacks">Research</button>
 
+                
+                <button class="button-35 tagbutt nav" onClick={() => { window.location.href='/stacks' }}>Stacks</button> */}
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("carbs") }}>Carbs</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("nuts") }}>Nuts</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("meat") }}>Meat</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("dairy") }}>Dairy</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("breakfast") }}>Breakfast</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("pasta") }}>Pasta</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("amazon") }}>Amazon</button>
+
+                <button class="button-35 tagbutt" onClick={() => { setTag("walmart") }}>Walmart</button>
+
+            {/*  <button class="button-35 tagbutt" role="button" onClick={() => { setTag("creatine") }}>Creatine</button>
+
+                <button class="button-35 tagbutt research" role="button" onClick={() => { setTag("posts") }}>Research</button> */}
+
+
+
+            </div>
+
+
+
+        <div class="sort">
         
-        <button class="button-35 tagbutt nav" onClick={() => { window.location.href='/stacks' }}>Stacks</button> */}
+        <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort By
+        </button>
 
-        <button class="button-35 tagbutt" onClick={() => { setTag("carbs") }}>Carbs</button>
+                <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
 
-        <button class="button-35 tagbutt" onClick={() => { setTag("nuts") }}>Nuts</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("meat") }}>Meat</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("dairy") }}>Dairy</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("bread") }}>Bread</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("breakfast") }}>Breakfast</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("whey") }}>Whey</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("pasta") }}>Pasta</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("amazon") }}>Amazon</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("walmart") }}>Walmart</button>
-
-       {/*  <button class="button-35 tagbutt" role="button" onClick={() => { setTag("creatine") }}>Creatine</button>
-
-        <button class="button-35 tagbutt research" role="button" onClick={() => { setTag("posts") }}>Research</button> */}
+                    <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
+                    <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
+                    <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
+                    <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
+                    <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("") }}>None</button>
+                </div>
 
 
+            </div>
 
-    </div>
+            <div className="results">
 
+                {products.length} results
 
-
-    <div class="sort">
-
-    {/* <a class="feedback-button" target="_blank" rel="noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSf6hY-gmnjw29oxaBhc5S19n6j8AYUWo1AAIop0U_RNcaNfSw/viewform?usp=sf_link">Give Feedback 💜</a>
-    */}
-    
-  <button class="dropdown-toggle sortbutt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Sort By
-  </button>
-
-    <div class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton">
-
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("calsPerDol") }}>Calories Per $</button>
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("fatPerDol") }}>Fat Per $</button>
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("protPerDol") }}>Protein Per $</button>
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("carbPerDol") }}>Carbs Per $</button>
-        <button class="sortbuttitem dropdown-item" onClick={() => { setSortBy("") }}>None</button>
-    </div>
-
-
-    {/* <div className="results">
-
-    {products.length} results
-
-    </div> */}
-
-
-    </div>
+            </div> 
 
     </div>
 
