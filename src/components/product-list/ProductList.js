@@ -103,7 +103,8 @@ function ProductList() {
         
     <div className="header">
 
-    <h3><strong>Stats <u>per $1 spent</u></strong> 💵</h3>
+    <h3><strong>EZ BULK</strong></h3>
+    <h5><strong>Macros Per Dollar Spent</strong> 💵</h5>
 
     </div>
 
@@ -122,8 +123,6 @@ function ProductList() {
         <button class="button-35 tagbutt nav" onClick={() => { window.location.href='/stacks' }}>Stacks</button> */}
 
         <button class="button-35 tagbutt" onClick={() => { setTag("carbs") }}>Carbs</button>
-
-        <button class="button-35 tagbutt" onClick={() => { setTag("protein") }}>Protein</button>
 
         <button class="button-35 tagbutt" onClick={() => { setTag("nuts") }}>Nuts</button>
 
@@ -147,7 +146,6 @@ function ProductList() {
 
         <button class="button-35 tagbutt research" role="button" onClick={() => { setTag("posts") }}>Research</button> */}
 
-        <button class="button-35 tagbutt gains" onClick={() => { setTag("gains") }}>Gains</button>
 
 
     </div>
