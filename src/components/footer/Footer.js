@@ -9,7 +9,7 @@ export default class Footer extends Component {
     return (
 
         <footer className="footer">
-
+{/* 
             <ReactMailchimpEmailSignupForm
               elementId="first-email-signup-form"
               url="https://Ezbulk.us18.list-manage.com/subscribe/post?u=7318f828a9e97ab10d05acef8&amp;id=a1262e1b0d"
@@ -19,7 +19,7 @@ export default class Footer extends Component {
 
             <a class="feedback-button" target="_blank" rel="noreferrer" href="https://www.buymeacoffee.com/ezbulkorg">Buy me a coffee ☕</a>
 
-
+ */}
 
         </footer>
 
